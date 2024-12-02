@@ -1,7 +1,7 @@
 <?php
 
 function getTareas() {
-    $mysqli = new mysqli("db", "root", "abc123.", "tareas");
+    $mysqli = new mysqli("db", "colegio", "colegio", "tareas");
     if ($mysqli->connect_error) {
         die("Connection failed: " . $mysqli->connect_error);
     }
@@ -21,7 +21,7 @@ function getTareas() {
 }
 
 function obtenerTareas($id_usuario = null, $estado = null) {
-    $mysqli = new mysqli("db", "root", "abc123.", "tareas");
+    $mysqli = new mysqli("db", "colegio", "colegio", "tareas");
     if ($mysqli->connect_error) {
         die("Connection failed: " . $mysqli->connect_error);
     }
@@ -47,7 +47,7 @@ function obtenerTareas($id_usuario = null, $estado = null) {
 }
 
 function nuevaTarea($titulo, $descripcion, $estado, $id_usuario) {
-    $mysqli = new mysqli("db", "root", "abc123.", "tareas");
+    $mysqli = new mysqli("db", "colegio", "colegio", "tareas");
     if ($mysqli->connect_error) {
         die("Connection failed: " . $mysqli->connect_error);
     }
@@ -64,7 +64,7 @@ function nuevaTarea($titulo, $descripcion, $estado, $id_usuario) {
 }
 
 function obtenerTarea($id) {
-    $mysqli = new mysqli("db", "root", "abc123.", "tareas");
+    $mysqli = new mysqli("db", "colegio", "colegio", "tareas");
     if ($mysqli->connect_error) {
         die("Connection failed: " . $mysqli->connect_error);
     }
@@ -83,7 +83,7 @@ function obtenerTarea($id) {
 }
 
 function editarTarea($id, $titulo, $descripcion, $estado, $id_usuario) {
-    $mysqli = new mysqli("db", "root", "abc123.", "tareas");
+    $mysqli = new mysqli("db", "colegio", "colegio", "tareas");
     if ($mysqli->connect_error) {
         die("Connection failed: " . $mysqli->connect_error);
     }
@@ -100,7 +100,7 @@ function editarTarea($id, $titulo, $descripcion, $estado, $id_usuario) {
 }
 
 function borraTarea($id) {
-    $mysqli = new mysqli("db", "root", "abc123.", "tareas");
+    $mysqli = new mysqli("db", "colegio", "colegio", "tareas");
     if ($mysqli->connect_error) {
         die("Connection failed: " . $mysqli->connect_error);
     }
