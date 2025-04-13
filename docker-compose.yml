@@ -10,7 +10,7 @@ services:
             MYSQL_PASSWORD: colegio
             MYSQL_ROOT_PASSWORD: test 
         volumes:
-            - ./dump:/docker-entrypoint-initdb.d
+            - ./dump/5.agenda.sql:/docker-entrypoint-initdb.d/init.sql
             - ./conf:/etc/mysql/conf.d
             - persistent:/var/lib/mysql
         networks:
